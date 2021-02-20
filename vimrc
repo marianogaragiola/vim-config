@@ -149,6 +149,9 @@ Plug 'dominikduda/vim_current_word'
 Plug 'gabrielelana/vim-markdown'
 "Plug 'plasticboy/vim-markdown'
 
+Plug 'christoomey/vim-system-copy'
+
+Plug 'heavenshell/vim-pydocstring', { 'do': 'make install' }
 " Add maktaba and codereview to the runtimepath.
 " " (The latter must be installed before it can be used.)
 "Plug 'google/vim-maktaba'
@@ -543,3 +546,9 @@ let g:vim_current_word#highlight_twins = 1
 "let g:vim_current_word#highlight_current_word = 1
 
 let g:vim_current_word#highlight_delay = 1000
+
+" Config for docstring generation 
+let g:pydocstring_formatter = 'numpy'
+let g:pydocstring_doq_path = "/home/mariano/.local/bin/doq"
+
+nnoremap <C-d> :Pydocstring<CR>
