@@ -152,6 +152,9 @@ Plug 'gabrielelana/vim-markdown'
 Plug 'christoomey/vim-system-copy'
 
 Plug 'heavenshell/vim-pydocstring', { 'do': 'make install' }
+
+Plug 'SirVer/ultisnips', {'for': ['sh', 'python', 'markdown']}
+Plug 'honza/vim-snippets', {'for': ['sh', 'python', 'markdown']}
 " Add maktaba and codereview to the runtimepath.
 " " (The latter must be installed before it can be used.)
 "Plug 'google/vim-maktaba'
@@ -519,6 +522,17 @@ set pastetoggle=<F5>
 
 " Enable NERDCommenterToggle to check all selected lines is commented or not 
 "let g:NERDToggleCheckAllLines = 1
+"
+let g:SuperTabDefaultCompletionType    = '<C-n>'
+let g:SuperTabCrMapping                = 0
+let g:UltiSnipsExpandTrigger           = '<tab>'
+let g:UltiSnipsJumpForwardTrigger      = '<tab>'
+let g:UltiSnipsJumpBackwardTrigger     = '<s-tab>'
+let g:ycm_key_list_select_completion   = ['<C-j>', '<C-n>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<C-k>', '<C-p>', '<Up>']
+
+let g:UltiSnipsEditSplit="vertical"
+let g:UltiSnipsListSnippets="<c-t>"
 
 nmap cc <leader>ci
 vmap cc <leader>ci
@@ -552,3 +566,4 @@ let g:pydocstring_formatter = 'numpy'
 let g:pydocstring_doq_path = "/home/mariano/.local/bin/doq"
 
 nnoremap <C-d> :Pydocstring<CR>
+nmap <Space> :noh<CR>
