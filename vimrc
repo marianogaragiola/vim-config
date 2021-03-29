@@ -534,6 +534,8 @@ let g:ycm_key_list_previous_completion = ['<C-k>', '<C-p>', '<Up>']
 let g:UltiSnipsEditSplit="vertical"
 let g:UltiSnipsListSnippets="<c-t>"
 
+nmap :qq :windo q
+
 nmap cc <leader>ci
 vmap cc <leader>ci
 "nmap ci <leader>ci
