@@ -155,6 +155,8 @@ Plug 'heavenshell/vim-pydocstring', { 'do': 'make install' }
 
 Plug 'SirVer/ultisnips', {'for': ['sh', 'python', 'markdown']}
 Plug 'honza/vim-snippets', {'for': ['sh', 'python', 'markdown']}
+
+Plug 'Jorengarenar/vim-MvVis'
 " Add maktaba and codereview to the runtimepath.
 " " (The latter must be installed before it can be used.)
 "Plug 'google/vim-maktaba'
@@ -569,3 +571,16 @@ let g:pydocstring_doq_path = "/home/mariano/.local/bin/doq"
 
 nnoremap <C-d> :Pydocstring<CR>
 nmap <Space> :noh<CR>
+
+vmap H <Plug>(MvVisLeft)
+vmap J <Plug>(MvVisDown)
+vmap K <Plug>(MvVisUp)
+vmap L <Plug>(MvVisRight)
+
+
+tnoremap <Esc> <C-\><C-n>
+" Move the splits arround!
+nmap <silent> <c-s-k> <C-W>k                                                                                                                       
+nmap <silent> <c-s-j> <C-W>j                                                                                                                       
+nmap <silent> <c-s-h> <C-W>h                                                                                                                       
+nmap <silent> <c-s-l> <C-W>l
