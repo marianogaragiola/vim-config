@@ -157,6 +157,8 @@ Plug 'SirVer/ultisnips', {'for': ['sh', 'python', 'markdown']}
 Plug 'honza/vim-snippets', {'for': ['sh', 'python', 'markdown']}
 
 Plug 'Jorengarenar/vim-MvVis'
+
+Plug 'rust-lang/rust.vim'
 " Add maktaba and codereview to the runtimepath.
 " " (The latter must be installed before it can be used.)
 "Plug 'google/vim-maktaba'
@@ -310,6 +312,7 @@ map <F3> :NERDTreeToggle<CR>
 nmap ,t :NERDTreeFind<CR>
 " don;t show these file types
 let NERDTreeIgnore = ['\.pyc$', '\.pyo$']
+let NERDTreeShowHidden = 1
 
 " Enable folder icons
 let g:WebDevIconsUnicodeDecorateFolderNodes = 1
@@ -580,7 +583,7 @@ vmap L <Plug>(MvVisRight)
 
 tnoremap <Esc> <C-\><C-n>
 " Move the splits arround!
-nmap <silent> <c-s-k> <C-W>k                                                                                                                       
-nmap <silent> <c-s-j> <C-W>j                                                                                                                       
-nmap <silent> <c-s-h> <C-W>h                                                                                                                       
-nmap <silent> <c-s-l> <C-W>l
+"nmap <silent> <c-s-k> <C-W>k
+"nmap <silent> <c-s-j> <C-W>j
+"nmap <silent> <c-s-h> <C-W>h
+"nmap <silent> <c-s-l> <C-W>l
