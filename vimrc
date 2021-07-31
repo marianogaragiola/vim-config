@@ -159,6 +159,8 @@ Plug 'honza/vim-snippets', {'for': ['sh', 'python', 'markdown']}
 Plug 'Jorengarenar/vim-MvVis'
 
 Plug 'rust-lang/rust.vim'
+
+Plug 'ambv/black'
 " Add maktaba and codereview to the runtimepath.
 " " (The latter must be installed before it can be used.)
 "Plug 'google/vim-maktaba'
@@ -580,10 +582,14 @@ vmap J <Plug>(MvVisDown)
 vmap K <Plug>(MvVisUp)
 vmap L <Plug>(MvVisRight)
 
+"autocmd BufWritePost *.py silent! execute ':Black:w'
+autocmd BufWritePre *.py execute ':Black'
+
+nnoremap <F9> :Black<CR>
 
 tnoremap <Esc> <C-\><C-n>
 " Move the splits arround!
-"nmap <silent> <c-s-k> <C-W>k
-"nmap <silent> <c-s-j> <C-W>j
-"nmap <silent> <c-s-h> <C-W>h
+"nmap <silent> <c-s-k> <C-W>k                                                                                                                       
+"nmap <silent> <c-s-j> <C-W>j                                                                                                                       
+"nmap <silent> <c-s-h> <C-W>h                                                                                                                       
 "nmap <silent> <c-s-l> <C-W>l

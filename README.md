@@ -16,6 +16,7 @@ And now, you need to install some `Python` libraries. I recomend install only
 for one user
 ```sh
 pip3 install pynvim flake8 pylint isort
+pip3 install --upgrade git+https://github.com/psf/black.git
 ```
 
 You need to do a little modification in you `.bashrc` file adding the following
