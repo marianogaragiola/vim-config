@@ -543,8 +543,11 @@ let g:UltiSnipsListSnippets="<c-t>"
 
 nmap :qq :windo q
 
-nmap cc <leader>ci
-vmap cc <leader>ci
+nnoremap <SPACE> <Nop>
+let mapleader=" "
+
+"nmap cc <leader>ci
+"vmap cc <leader>ci
 "nmap ci <leader>ci
 "vmap ci <leader>ci
 
@@ -575,7 +578,7 @@ let g:pydocstring_formatter = 'numpy'
 let g:pydocstring_doq_path = "/home/mariano/.local/bin/doq"
 
 nnoremap <C-d> :Pydocstring<CR>
-nmap <Space> :noh<CR>
+"nmap <Space> :noh<CR>
 
 vmap H <Plug>(MvVisLeft)
 vmap J <Plug>(MvVisDown)
@@ -588,6 +591,7 @@ autocmd BufWritePre *.py execute ':Black'
 nnoremap <F9> :Black<CR>
 
 tnoremap <Esc> <C-\><C-n>
+
 " Move the splits arround!
 "nmap <silent> <c-s-k> <C-W>k                                                                                                                       
 "nmap <silent> <c-s-j> <C-W>j                                                                                                                       
