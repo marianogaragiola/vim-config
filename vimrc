@@ -584,16 +584,24 @@ vmap H <Plug>(MvVisLeft)
 vmap J <Plug>(MvVisDown)
 vmap K <Plug>(MvVisUp)
 vmap L <Plug>(MvVisRight)
+nnoremap <leader>j :m .+1<CR>==
+nnoremap <leader>k :m .-2<CR>==
 
 "autocmd BufWritePost *.py silent! execute ':Black:w'
+let g:black_linelength = 79
 autocmd BufWritePre *.py execute ':Black'
 
 nnoremap <F9> :Black<CR>
 
 tnoremap <Esc> <C-\><C-n>
 
-" Move the splits arround!
-"nmap <silent> <c-s-k> <C-W>k                                                                                                                       
-"nmap <silent> <c-s-j> <C-W>j                                                                                                                       
-"nmap <silent> <c-s-h> <C-W>h                                                                                                                       
-"nmap <silent> <c-s-l> <C-W>l
+" vimgrep mappings
+nnoremap [q :cprev<CR>
+nnoremap ]q :cnext<CR>
+
+" Git mappings
+nnoremap <leader>gs :Gstatus<CR>
+nnoremap <leader>gc :Gcommit<CR>
+
+nnoremap Y y$
+
