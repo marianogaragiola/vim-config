@@ -589,9 +589,10 @@ nnoremap <leader>k :m .-2<CR>==
 
 "autocmd BufWritePost *.py silent! execute ':Black:w'
 let g:black_linelength = 79
-autocmd BufWritePre *.py execute ':Black'
+"autocmd BufWritePre *.py execute ':Black'
 
 nnoremap <F9> :Black<CR>
+nnoremap <F10> :Isort<CR>
 
 tnoremap <Esc> <C-\><C-n>
 
@@ -603,5 +604,5 @@ nnoremap ]q :cnext<CR>
 nnoremap <leader>gs :Gstatus<CR>
 nnoremap <leader>gc :Gcommit<CR>
 
-nnoremap Y y$
-
+nmap Y y$
+nnoremap <leader>ct :bd<CR>
