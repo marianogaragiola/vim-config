@@ -605,4 +605,6 @@ nnoremap <leader>gs :Gstatus<CR>
 nnoremap <leader>gc :Gcommit<CR>
 
 nmap Y y$
-nnoremap <leader>ct :bd<CR>
+"nnoremap <leader>ct :bd<CR>
+nnoremap <leader>ct :bp<bar>sp<bar>bn<bar>bd<CR> 
+
