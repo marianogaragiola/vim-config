@@ -591,6 +591,10 @@ nnoremap <leader>k :m .-2<CR>==
 let g:black_linelength = 79
 "autocmd BufWritePre *.py execute ':Black'
 
+let g:vim_isort_python_version = 'python3'
+let g:vim_isort_config_overrides = {
+  \ 'include_trailing_comma': 1, 'multi_line_output': 3}
+
 nnoremap <F9> :Black<CR>
 nnoremap <F10> :Isort<CR>
 
